@@ -1,16 +1,17 @@
-#include<stdio.h>
-
-int main(){
-	int num;
-	printf("Enter number: \n");
-	scanf("%d", &num);
-	
-	printf("Factorial is : %d \n", fac(num));
-	
-}
-int fac(int num){
-	if(num>1)
-		return num*fac(num-1);
-	else
-		return 1;
+#include <stdio.h>
+ 
+int main()
+{
+  int c, n, fact = 1;
+ 
+  printf("Enter a number to calculate its factorial\n");
+  scanf("%d", &n);
+ 
+  for (c = 1; c <= n; c++)
+    fact = fact * c;
+ 
+  printf("Factorial of %d = %d\n", n, fact);
+ 
+  return 0;
+  jfhgdhdgdrdytufudgsdjdjbskjdbs
 }

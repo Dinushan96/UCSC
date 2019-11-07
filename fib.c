@@ -1,20 +1,26 @@
-#include<stdio.h>
-
-int main(){
-	int n;
-	printf("enter number : \n");
-	scanf("%d", &n);
-	
-	printf("result : %d ", fib(n));
-
+#include <stdio.h>
+ 
+int main()
+{
+  int row, c, n, s;
+ 
+  printf("Enter the number of rows in traingle\n");
+  scanf("%d", &n);
+ 
+  s = n;
+ 
+  for (row = 1; row <= n; row++)  // Loop to print rows
+  {
+    for (c = 1; c < s; c++)  // Loop to print spaces in a row
+      printf(" ");
+ 
+    s--;
+ 
+    for (c = 1; c <= 2*row - 1; c++) 
+      printf("*");
+ 
+    printf("\n");
+  }
+ 
+  return 0;
 }
-
-int fib(int n){
-	
-	if(n==0 || n==1)
-		return n;
-		
-	else
-		return (fib(n-1)+ fib(n-2));
-}
-
